@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>IRKitでIoT的子育て</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-markdown
+			    data-separator="\n---\n$"
+			    data-vertical="\n--\n">
+			    <script type="text/template">
+					## IRKitでIoT的子育て
+
+					北田 翼
+
+					---
+
+					### アジェンダ
+
+					1. IoT雑感
+					1. IRKitでIoT的子育て
+
+					---
+
+					### IoT雑感
+
+					1. IoTとは
+					1. IoTの過去と未来
+
+					--
+
+					### IoTとは
+
+					>モノのインターネット（Internet of Things、IoT）は、一意に識別可能な「もの」がインターネット/クラウドに接続され、情報交換することにより相互に制御する仕組みである[1]。
+					>ここでいう「もの」とは、スマートフォンのようにIPアドレスを持つものや、IPアドレスを持つセンサーから検知可能なRFIDタグを付けた商品や、IPアドレスを持った機器に格納されたコンテンツのことである。
+
+					Wikipediaより
+
+					--
+
+					### IoTとは
+
+					要は、すべてのものがインターネッツにつながります。
+
+					---
+
+					### IoTの過去と未来
+
+					[WORLD PC EXPO 98で「インターネット冷蔵庫」登場！](http://internet.watch.impress.co.jp/www/article/981001/wpce.htm)
+
+					1998年...17年経ちましたが、冷蔵庫はインターネッツにつながっていません。
+
+					--
+
+					### IoTの過去と未来
+					![パッケージデザイン](./eledoor.png)
+
+					--
+
+					### IoTの過去と未来
+
+					- [Apple HomeKit](https://developer.apple.com/homekit/)
+
+					  - あ、[swiftじゃないんだ...](https://developer.apple.com/library/ios/documentation/HomeKit/Reference/HomeKit_Framework/index.html)  
+
+				    - [Androd @Home](https://developers.google.com/events/io/)
+
+					  - 公式ページに情報がなくなっている件
+
+					IoTの有力株たるスマートハウスでする死屍累々の様相
+
+					---
+
+					### IRKitでIoT的子育て
+
+					スマートハウスは、既に達成されているのでは？
+
+					- ヒント:赤外線(Infrared)
+
+					---
+
+					### ありがとうございました!
+					#### [Fork me!](https://github.com/mediba-Kitada/mediba-kitada.github.io)
+
+					- 参考資料
+
+					---
+
+			    </script>
+
+				</sectin>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
